@@ -9,13 +9,21 @@ Welcome the newest BPM Engine API documentation. All comments can be written in 
 Process Resources
 The following is a section of resources related to the Process Designer
 --
-List projects added into Engine Database.
+List all projects added into Engine Database.
 GET /rest/project
 < 200
 < Content-Type: application/json
 [{"prj_id":"1","prj_uid":"prj_51c4a0d6aac9d4.27647268","prj_name":"Discount Approval Process","prj_target_namespace":"","prj_expression_language":"","prj_type_language":"","prj_exporter":"","prj_exporter_version":"","prj_create_date":"2013-05-03 11:10:56","prj_update_date":"2013-05-03 11:10:56","prj_author":"Administrator","prj_author_version":"","prj_original_source":"","prj_description":""},{"prj_id":"2","prj_uid":"prj_51c4a1b41a9fe8.99007557","prj_name":"Leave absence request Dev","prj_target_namespace":"","prj_expression_language":"","prj_type_language":"","prj_exporter":"","prj_exporter_version":"","prj_create_date":"2013-06-18 18:59:01","prj_update_date":"2013-06-18 18:59:01","prj_author":"Fernando Ontiveros","prj_author_version":"","prj_original_source":"","prj_description":"for Dev and QA"}]
 
+GET /rest/project/1
+< 200
+< Content-Type: application/json
+{"success":true,"project":{"prj_id":"1","prj_uid":"prj_51c4a0d6aac9d4.27647268","prj_name":"Discount Approval Process","prj_target_namespace":"","prj_expression_language":"","prj_type_language":"","prj_exporter":"","prj_exporter_version":"","prj_create_date":"2013-05-03 11:10:56","prj_update_date":"2013-05-03 11:10:56","prj_author":"Administrator","prj_author_version":"","prj_original_source":"","prj_description":""}}
 
+GET /rest/project/prj_51c4a0d6aac9d4.27647268
+< 200
+< Content-Type: application/json
+{"success":true,"project":{"prj_id":"1","prj_uid":"prj_51c4a0d6aac9d4.27647268","prj_name":"Discount Approval Process","prj_target_namespace":"","prj_expression_language":"","prj_type_language":"","prj_exporter":"","prj_exporter_version":"","prj_create_date":"2013-05-03 11:10:56","prj_update_date":"2013-05-03 11:10:56","prj_author":"Administrator","prj_author_version":"","prj_original_source":"","prj_description":""}}
 
 Save new products in your shopping cart
 POST /shopping-cart
